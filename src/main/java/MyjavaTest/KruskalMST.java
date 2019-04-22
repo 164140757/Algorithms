@@ -41,6 +41,7 @@ public class KruskalMST
 
     public static void main( String[] args )
     {   
+        long startTime = System.currentTimeMillis();
        In in = new In(args[0]);
        EdgeWeightedGraph G = new EdgeWeightedGraph(in);
        KruskalMST mst = new KruskalMST(G);
@@ -48,6 +49,9 @@ public class KruskalMST
             StdOut.println(e);
         }
         StdOut.printf("%.5f\n",mst.weight());
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+        System.out.println(elapsedTime);
     }
 
 

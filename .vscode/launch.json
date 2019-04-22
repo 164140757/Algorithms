@@ -6,7 +6,7 @@
       "request": "launch",
       "mainClass": "MyjavaTest.KruskalMST",
       "projectName": "Graph",
-      "args": ["src/main/data/tinyG.txt"],
+      "args": ["src/main/data/1000EWG.txt"],
     },
     {
       "type": "java",
