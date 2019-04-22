@@ -30,7 +30,7 @@
       <artifactId>Graph</artifactId>
       <version>4.11</version>
       <scope>system</scope>
-      <systemPath>C:\Users\16414\Desktop\Graph\src\main\lib\algs4.jar</systemPath>
+      <systemPath>D:\development\1\Algorithms\src\main\lib\algs4.jar</systemPath>
     </dependency>
   </dependencies>
     
