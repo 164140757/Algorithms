@@ -2,11 +2,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Graph",
+      "request": "launch",
+      "mainClass": "MyjavaTest.Graph",
+      "projectName": "Graph"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - KruskalMST",
       "request": "launch",
       "mainClass": "MyjavaTest.KruskalMST",
       "projectName": "Graph",
-      "args": ["src/main/data/1000EWG.txt"],
+      "args": [
+        "src/main/data/1000EWG.txt"
+      ]
     },
     {
       "type": "java",
@@ -30,8 +39,7 @@
       "breakOnLoad": true,
       "sourceMapPathOverrides": {
         "webpack:///src/*": "${webRoot}/*"
-      },
-    
+      }
     }
   ]
 }
