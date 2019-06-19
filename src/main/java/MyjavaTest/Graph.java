@@ -7,53 +7,8 @@ import java.util.NoSuchElementException;
 public class Graph{//double ->WeightType of Edges
   private int V;//cannot be modified
   private int E;//number of edges
-  private List<Node> headNodeList;
+  protected List<Node> headNodeList;
   //inner class & Generic Class
-  private class Node{
-     private double weight;//for edges
-     private String tag;
-     private Node next;
-     private int index;
-
-     public Node(){
-        index = -1;
-        next = null;
-        tag = "#";
-        //weight ->null
-     }
-     public int getIndex() {
-        return index;
-     }
-     public void setIndex(int index){
-       this.index = index;
-     }
-     public void setNext(Node next){
-       this.next = next;
-     }
-     public Node getNext(){
-       return next;
-     }
-     public String getTag(){
-       return tag;
-     }
-     
-    public void setTag(String tag) {
-      this.tag = tag;
-    }
-    
-    public void AutoAddtagForEnd(int IndexOfEnd) {
-      String init = "A";
-      int ascii = (int) init.charAt(0) + IndexOfEnd;
-      init = Character.toString((char) ascii);
-      this.setTag(init);
-    }
-    public double getWeight(){
-      return weight;
-    }
-    public void setWeight(double weight){
-       this.weight = weight;
-     } 
-  }
 
   //constructor of empty adjacency list
   public Graph(int vertex) {
@@ -70,10 +25,11 @@ public class Graph{//double ->WeightType of Edges
     }
   }
   
-  public Graph(In in){
+  public Graph(In in,int model){//model: 1 for characters from A-Z ; 2 for Integer from 1 to n 
     try{
       this.V = in.readInt();
       if(V<0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
+      if (model == 1 && V>23) throw new IllegalArgumentException("model 1 supports only number of vertexs within 23,please try another tag model");
       this.E = in.readInt();
       if(E<0) throw new IllegalArgumentException("Number of edges must be nonnegative");
       headNodeList = new ArrayList<>(V);//()gives the initalCapacity
@@ -84,12 +40,7 @@ public class Graph{//double ->WeightType of Edges
         headNodeList.add(node);
       }
       //add tags
-      String init = "A";
-      for(int i=0;i<V;i++){
-        headNodeList.get(i).setTag(init);
-        int ascii = (int) init.charAt(0) +1;
-        init = Character.toString((char) ascii);
-      }
+      headNodeListAddTags(model);
       //add Edges
       for (int i =0;i<E;i++){
         int v = in.readInt();
@@ -107,11 +58,37 @@ public class Graph{//double ->WeightType of Edges
 
   //methods
   //{@code 0<= v <= V}
+  public int V() {
+    return V;
+  }
+
+  public int E() {
+    return E;
+  }
   private void validateVertex(int v){
     if(v<0 || v>V) throw new IllegalArgumentException("vertex"+V+"is not between 0 and"+(V-1));
     //() make sure parameter given to IllegalArgumentException is a string
   }
-  public void addEdge(int v,int u,double VALUE){
+  private void headNodeListAddTags(int model){
+    switch (model) {
+      case 1:
+        String init = "A";
+        for (int i = 0; i < V; i++) {
+          headNodeList.get(i).setTag(init);
+          int ascii = (int) init.charAt(0) + 1;
+          init = Character.toString((char) ascii);
+      }
+        break;
+      case 2:
+        for(int i=0;i<V;i++){
+          String tString = Integer.toString(i);
+          headNodeList.get(i).setTag(tString);
+        }
+      default:
+        break;
+    }
+  }
+  private void addEdge(int v,int u,double VALUE){
     validateVertex(v);
     validateVertex(u);
     Node node = new Node();
@@ -133,7 +110,7 @@ public class Graph{//double ->WeightType of Edges
     Node Nnode = new Node();
     Nnode.setIndex(u);
     Nnode.setWeight(VALUE);
-    Nnode.AutoAddtagForEnd(u);
+    Nnode.AutoAddtagForEnd(u,2);
     node.next = Nnode;
   }
   public void traverseHeadList(){
@@ -164,8 +141,8 @@ public class Graph{//double ->WeightType of Edges
     // g.addEdge(2, 1, 2.21);
     // g.addEdge(0, 2, 3.21);
     // g.traverseHeadList();
-    In in = new In("src/main/data/10EWG.txt");
-    Graph g = new Graph(in);
+    In in = new In("src/main/data/1000EWG.txt");
+    Graph g = new Graph(in,2);
     g.traverseHeadList();
   }
 } 
