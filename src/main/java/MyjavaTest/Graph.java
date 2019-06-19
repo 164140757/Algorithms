@@ -40,6 +40,13 @@ public class Graph{//double ->WeightType of Edges
     public void setTag(String tag) {
       this.tag = tag;
     }
+    
+    public void AutoAddtagForEnd(int IndexOfEnd) {
+      String init = "A";
+      int ascii = (int) init.charAt(0) + IndexOfEnd;
+      init = Character.toString((char) ascii);
+      this.setTag(init);
+    }
     public double getWeight(){
       return weight;
     }
@@ -80,10 +87,8 @@ public class Graph{//double ->WeightType of Edges
       String init = "A";
       for(int i=0;i<V;i++){
         headNodeList.get(i).setTag(init);
-        char temp = init.charAt(0);
-        int ascii = (int) temp +1;
-        char tChar = (char)ascii;
-        init = Character.toString(tChar);
+        int ascii = (int) init.charAt(0) +1;
+        init = Character.toString((char) ascii);
       }
       //add Edges
       for (int i =0;i<E;i++){
@@ -114,16 +119,22 @@ public class Graph{//double ->WeightType of Edges
     while(node.getNext()!=null){//headNode(n-1) already exits
       node = node.next;
       int index = node.getIndex();
-      if(index == u ) {node.setWeight(VALUE);return;}
+      if(index == u ) {
+        node.setWeight(VALUE);
+        return;
+      }
     }
     //headNode(n) & for new node to insert in the end of list
-    if(node.getIndex()==u){node.setWeight(VALUE);return;}
+    if(node.getIndex()==u){
+      node.setWeight(VALUE);
+      return;
+    }
     //headNode[u][v] does not exit
     Node Nnode = new Node();
     Nnode.setIndex(u);
     Nnode.setWeight(VALUE);
+    Nnode.AutoAddtagForEnd(u);
     node.next = Nnode;
-
   }
   public void traverseHeadList(){
     Node node = new Node();
@@ -140,7 +151,7 @@ public class Graph{//double ->WeightType of Edges
       System.out.printf("%s :",node.tag);
       node = node.next;//first element of the vertex
       while(node!=null){
-        System.out.printf("%s ",node.getWeight());
+        System.out.printf("->%s %s   ",node.getTag(),node.getWeight());
         node = node.next;
       }
       System.out.println();
@@ -157,4 +168,4 @@ public class Graph{//double ->WeightType of Edges
     Graph g = new Graph(in);
     g.traverseHeadList();
   }
-}
+} 
