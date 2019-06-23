@@ -54,7 +54,7 @@ public class BFS{
     return distTo[v];
   }
   
-  public Iterable<Integer> pathTo(int v){
+  public Stack<Integer> pathTo(int v){
     validateVertex(v);
 
     if(!hasPathTo(v)) return null;
@@ -80,12 +80,21 @@ public class BFS{
     for(int v = 0;v<g.V();v++){//check if every vertex is connected
       if(bfs.hasPathTo(v)){
         //show path
-        for(int x:bfs.pathTo(v)){
-          //pathTo:instance of iterable
-          if(x == source)System.out.printf("%d",x);
-          else System.out.printf("%d<- ",x);
-      }
-      System.out.println();
+      //   for(int x:bfs.pathTo(v)){
+      //     //pathTo:instance of iterable
+      //     if(x == source)System.out.printf("%d",x);
+      //     else System.out.printf("%d<- ",x);
+      // }
+        Stack<Integer> path = new Stack<Integer>();
+        path = bfs.pathTo(v);
+        while(!path.empty()){
+          int x = path.pop();
+          if (x == source)
+            System.out.printf("%d ", x);
+          else
+          System.out.printf("->%d ",x);
+        } 
+        System.out.println();
     }
     else{
       System.out.printf("%d to %d : not connected\n",source,v);
