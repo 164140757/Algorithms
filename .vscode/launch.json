@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - DFS",
+      "request": "launch",
+      "mainClass": "MyjavaTest.DFS",
+      "projectName": "Graph"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - BFS",
       "request": "launch",
       "mainClass": "MyjavaTest.BFS",

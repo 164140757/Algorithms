@@ -51,7 +51,7 @@ public class Graph{//double ->WeightType of Edges
         addEdge(v, u, w);
       }
     }
-    catch(NoSuchElementException e){
+    catch(NoSuchElementException e){ //if the number of edges is not equal to the data 
       throw new IllegalArgumentException("invalid input format in Graph constructor");
     }
   }

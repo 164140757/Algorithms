@@ -79,12 +79,6 @@ public class BFS{
     BFS bfs = new BFS(g,source);//one time bfs
     for(int v = 0;v<g.V();v++){//check if every vertex is connected
       if(bfs.hasPathTo(v)){
-        //show path
-      //   for(int x:bfs.pathTo(v)){
-      //     //pathTo:instance of iterable
-      //     if(x == source)System.out.printf("%d",x);
-      //     else System.out.printf("%d<- ",x);
-      // }
         Stack<Integer> path = new Stack<Integer>();
         path = bfs.pathTo(v);
         while(!path.empty()){
