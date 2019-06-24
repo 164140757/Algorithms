@@ -6,8 +6,8 @@ public class DFS{
   private boolean[] marked;//marked reachable
   private int[] edgeTo; // last edge 
   private final int s = 0; // source vertex
-  private int[] d;// time to start
-  private int[] f;// time to finish
+  protected int[] d;// time to start
+  protected int[] f;// time to finish
   private int time = 0;// global time 
 
   public DFS(Graph g,int s){
@@ -39,6 +39,7 @@ public class DFS{
     validateVertex(v);
     return marked[v];
   }
+  // path(Stack) to push a vertex when finishing visiting it 
   public Stack<Integer> pathTo(int v){
     validateVertex(v);
     if(!hasPathTo(v)) return null;
