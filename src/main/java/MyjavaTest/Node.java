@@ -1,10 +1,10 @@
 package MyjavaTest;
 
 public class Node {
-  protected double weight;// for edges
-  protected String tag;
-  protected Node next;
-  protected int index;
+  double weight;// for edges
+  String tag;
+  Node next;
+  int index;
 
   public Node() {
     index = -1;
@@ -13,31 +13,31 @@ public class Node {
     // weight ->null
   }
 
-  public int getIndex() {
+  int getIndex() {
     return index;
   }
 
-  public void setIndex(int index) {
+  void setIndex(int index) {
     this.index = index;
   }
 
-  public void setNext(Node next) {
+  void setNext(Node next) {
     this.next = next;
   }
 
-  public Node getNext() {
+  Node getNext() {
     return next;
   }
 
-  public String getTag() {
+  String getTag() {
     return tag;
   }
 
-  public void setTag(String tag) {
+  void setTag(String tag) {
     this.tag = tag;
   }
 
-  public void AutoAddtagForEnd(int indexOfEnd,int model) {
+  void AutoAddtagForEnd(int indexOfEnd,int model) {
     switch (model) {
       case 1:
         String init = "A";

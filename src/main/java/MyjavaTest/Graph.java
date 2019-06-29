@@ -7,13 +7,13 @@ import java.util.NoSuchElementException;
 public class Graph{//double ->WeightType of Edges
   private int V;//cannot be modified
   private int E;//number of edges
-  protected List<Node> headNodeList;
+  List<Node> headNodeList;
   //inner class & Generic Class
 
   //constructor of empty adjacency list
   public Graph(int vertex) {
     E = 0;
-    if(V<0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
+    if(vertex<0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
     this.V = vertex;
     headNodeList = new ArrayList<>(V);//headlist with space & ArrayList to instantiate List
     //List<Node> headNodeList - > cannot visit class Graph's field instead -> a new list 
@@ -58,11 +58,11 @@ public class Graph{//double ->WeightType of Edges
 
   //methods
   //{@code 0<= v <= V}
-  public int V() {
+  int V() {
     return V;
   }
 
-  public int E() {
+  int E() {
     return E;
   }
   private void validateVertex(int v){

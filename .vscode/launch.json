@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - TopoLogical_sort",
+      "request": "launch",
+      "mainClass": "MyjavaTest.TopoLogical_sort",
+      "projectName": "Graph"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - DFS",
       "request": "launch",
       "mainClass": "MyjavaTest.DFS",
