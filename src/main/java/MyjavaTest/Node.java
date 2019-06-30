@@ -1,12 +1,12 @@
 package MyjavaTest;
 
-public class Node {
-  double weight;// for edges
-  String tag;
-  Node next;
-  int index;
+class Node {
+  private double weight;// for edges
+  private String tag;
+  private Node next;
+  private int index;
 
-  public Node() {
+  Node() {
     index = -1;
     next = null;
     tag = "#";

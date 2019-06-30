@@ -12,7 +12,7 @@ public class BFS{
   private int[] edgeTo;//edgeTo[v] preVertex
   private static final int INFINITY = Integer.MAX_VALUE;
 
-  public BFS(Graph G,int s){//from s to the other vertexs
+  public BFS(WeightedGraph G, int s){//from s to the other vertexs
     //initialize a graph
       marked = new boolean[G.V()];
       distTo = new double[G.V()];
@@ -25,14 +25,15 @@ public class BFS{
       bfs(G,s);
   }
   //BFS from single source
-  private void bfs(Graph g,int s){
+  private void bfs(WeightedGraph g, int s){
     Queue<Integer> q = new LinkedList<>();
     marked[s] = true;
     distTo[s] = 0;
     q.add(s);
     while(!q.isEmpty()){
       int v = q.remove();
-      Node n =g.headNodeList.get(v).next;//the first element
+      Node n =g.HeadNodeList().get(v).getNext();//the first element
+      //iterate all nodes connected
       while(n!=null){
         int index = n.getIndex();
         if(!marked[index]){
@@ -41,7 +42,7 @@ public class BFS{
           marked[index] = true;
           q.add(index);
         }
-        n = n.next;  
+        n = n.getNext();
       }
     }
   }
@@ -74,7 +75,7 @@ public class BFS{
 
    public static void main(String[] args) {
     In in = new In("src/main/data/10EWG_bfs.txt");
-    Graph g = new Graph(in,1);
+    WeightedGraph g = new WeightedGraph(in,1);
     int source = 0;
     BFS bfs = new BFS(g,source);//one time bfs
     for(int v = 0;v<g.V();v++){//check if every vertex is connected

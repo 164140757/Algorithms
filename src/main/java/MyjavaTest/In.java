@@ -12,15 +12,15 @@ import java.io.IOException;
 public final class In{
   private Scanner scanner;//declare
   // assume Unicode UTF-8 encoding
-  public static final String CHARSET_NAME = "UTF-8";
+  private static final String CHARSET_NAME = "UTF-8";
   //assume language = English, country = US
-  public static final Locale LOCALE = Locale.US;
+  private static final Locale LOCALE = Locale.US;
   //Initializes an input stream from standard input
   public In(){
     scanner =new Scanner(new BufferedInputStream(System.in),CHARSET_NAME);
     scanner.useLocale(LOCALE);
   }
-  public In(String name){
+  In(String name){
     if(name == null)throw new IllegalArgumentException("argument is null");
     try{
       //local file System

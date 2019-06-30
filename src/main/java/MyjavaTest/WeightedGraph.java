@@ -3,20 +3,30 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
-
-public class Graph{//double ->WeightType of Edges
+/**
+ * I plan to create a Graph superclass ,but failed
+ * because of the data format we have in data/.txt.
+ * To be more specific,
+ * the weighted graph has to add another parameter to
+ * set a weight for every edge
+ * while the unweighted doesn't
+ *
+ * so I decide to create different classes, although it
+ * seems a little improper.
+ */
+public class WeightedGraph {//double ->WeightType of Edges
   private int V;//cannot be modified
   private int E;//number of edges
-  List<Node> headNodeList;
+  private List<Node> headNodeList;
   //inner class & Generic Class
 
   //constructor of empty adjacency list
-  public Graph(int vertex) {
+  public WeightedGraph(int vertex) {
     E = 0;
     if(vertex<0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
     this.V = vertex;
     headNodeList = new ArrayList<>(V);//headlist with space & ArrayList to instantiate List
-    //List<Node> headNodeList - > cannot visit class Graph's field instead -> a new list 
+    //List<Node> headNodeList - > cannot visit class WeightedGraph's field instead -> a new list
     for (int i=0;i<V;i++){//nodes -> list
       Node node = new Node();
       node.setIndex(i);
@@ -24,11 +34,12 @@ public class Graph{//double ->WeightType of Edges
       headNodeList.add(node);
     }
   }
-  
-  public Graph(In in,int model){//model: 1 for characters from A-Z ; 2 for Integer from 1 to n 
+
+  WeightedGraph(In in, int model){//model: 1 for characters from A-Z ; 2 for Integer from 1 to n
     try{
       this.V = in.readInt();
       if(V<0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
+      if(model!=1 & model!=2) throw new IllegalArgumentException("Only model number 1 or 2 can be selected!");
       if (model == 1 && V>23) throw new IllegalArgumentException("model 1 supports only number of vertexs within 23,please try another tag model");
       this.E = in.readInt();
       if(E<0) throw new IllegalArgumentException("Number of edges must be nonnegative");
@@ -52,12 +63,13 @@ public class Graph{//double ->WeightType of Edges
       }
     }
     catch(NoSuchElementException e){ //if the number of edges is not equal to the data 
-      throw new IllegalArgumentException("invalid input format in Graph constructor");
+      throw new IllegalArgumentException("invalid input format in WeightedGraph constructor");
     }
   }
 
   //methods
   //{@code 0<= v <= V}
+  List<Node> HeadNodeList(){return headNodeList;}
   int V() {
     return V;
   }
@@ -88,13 +100,13 @@ public class Graph{//double ->WeightType of Edges
         break;
     }
   }
-  private void addEdge(int v,int u,double VALUE){
+   private void addEdge(int v,int u,double VALUE){
     validateVertex(v);
     validateVertex(u);
     Node node = new Node();
     node = headNodeList.get(v);//headNode[v] & get(i) returns the element at the position i
     while(node.getNext()!=null){//headNode(n-1) already exits
-      node = node.next;
+      node = node.getNext();
       int index = node.getIndex();
       if(index == u ) {
         node.setWeight(VALUE);
@@ -111,9 +123,9 @@ public class Graph{//double ->WeightType of Edges
     Nnode.setIndex(u);
     Nnode.setWeight(VALUE);
     Nnode.AutoAddtagForEnd(u,2);
-    node.next = Nnode;
+    node.setNext(Nnode);
   }
-  public void traverseHeadList(){
+  private void traverseHeadList(){
     Node node = new Node();
     System.out.printf("List:[ ");
     for (int i =0;i<V;i++){
@@ -125,11 +137,11 @@ public class Graph{//double ->WeightType of Edges
     while(iterator.hasNext()){
       node = iterator.next();//iterate over headNodeList
       //iterate over headNodeList[i]
-      System.out.printf("%s :",node.tag);
-      node = node.next;//first element of the vertex
+      System.out.printf("%s :",node.getTag());
+      node = node.getNext();//first element of the vertex
       while(node!=null){
         System.out.printf("->%s %s   ",node.getTag(),node.getWeight());
-        node = node.next;
+        node = node.getNext();
       }
       System.out.println();
     }
@@ -137,12 +149,12 @@ public class Graph{//double ->WeightType of Edges
   }
 
   public static void main(String...args) {
-    // Graph g = new Graph(3);
+    // WeightedGraph g = new WeightedGraph(3);
     // g.addEdge(2, 1, 2.21);
     // g.addEdge(0, 2, 3.21);
     // g.traverseHeadList();
     In in = new In("src/main/data/1000EWG.txt");
-    Graph g = new Graph(in,2);
+    WeightedGraph g = new WeightedGraph(in,2);
     g.traverseHeadList();
   }
 } 

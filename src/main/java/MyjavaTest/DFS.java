@@ -1,18 +1,17 @@
 package MyjavaTest;
 
-import java.util.Deque;
 import java.util.Stack;
 
 public class DFS {
   //protected for inheritance
   boolean[] marked;//marked reachable
-  int[] edgeTo; // last edge
+  private int[] edgeTo; // last edge
   private final int s = 0; // source vertex
-  int[] d;// time to start
-  int[] f;// time to finish
-  int time = 0;// global time
+  private int[] d;// time to start
+  private int[] f;// time to finish
+  private int time = 0;// global time
 
-  DFS(Graph g, int s) {
+  DFS(WeightedGraph g, int s) {
     marked = new boolean[g.V()];
     edgeTo = new int[g.V()];
     d = new int[g.V()];
@@ -30,18 +29,18 @@ public class DFS {
     }
   }
 
-  private void dfs(Graph g, int v) {
+  private void dfs(WeightedGraph g, int v) {
     marked[v] = true;// v is reachable
     time = time + 1;//discover
     d[v] = time;
-    Node n = g.headNodeList.get(v).next;
+    Node n = g.HeadNodeList().get(v).getNext();
     while (n != null) {
       int index = n.getIndex();
       if (!marked[index]) {
         edgeTo[index] = v;
         dfs(g, index);
       }
-      n = n.next;
+      n = n.getNext();
     }
     time = time + 1;// finish visiting one node ,time plus one
     f[v] = time;
@@ -71,7 +70,7 @@ public class DFS {
 
   public static void main(String[] args) {
     In in = new In("src/main/data/DFSdataBook.txt");
-    Graph g = new Graph(in, 1);
+    WeightedGraph g = new WeightedGraph(in, 1);
     int source = 0;
     DFS dfs = new DFS(g, source);
 
