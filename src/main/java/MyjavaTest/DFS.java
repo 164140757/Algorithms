@@ -19,7 +19,14 @@ public class DFS {
     validateVertex(s);
     dfs(g, s);
   }
-
+  DFS(UnweightedGraph g, int s) {
+    marked = new boolean[g.V()];
+    edgeTo = new int[g.V()];
+    d = new int[g.V()];
+    f = new int[g.V()];
+    validateVertex(s);
+    dfs(g, s);
+  }
   void reset_marked() {
 //    for(boolean m :marked){
 //      m = false;
@@ -27,6 +34,22 @@ public class DFS {
     for(int i=0 ; i<marked.length;i++){
       marked[i] = false;
     }
+  }
+  private void dfs(UnweightedGraph g, int v) {
+    marked[v] = true;// v is reachable
+    time = time + 1;//discover
+    d[v] = time;
+    Node n = g.HeadNodeList().get(v).getNext();
+    while (n != null) {
+      int index = n.getIndex();
+      if (!marked[index]) {
+        edgeTo[index] = v;
+        dfs(g, index);
+      }
+      n = n.getNext();
+    }
+    time = time + 1;// finish visiting one node ,time plus one
+    f[v] = time;
   }
 
   private void dfs(WeightedGraph g, int v) {
@@ -52,7 +75,7 @@ public class DFS {
   }
 
   // path(Stack) to push a vertex when finishing visiting it
-  private Stack<Integer> pathTo(int v) {
+  Stack<Integer> pathTo(int v) {
     validateVertex(v);
     if (!hasPathTo(v)) return null;
     Stack<Integer> path = new Stack<Integer>();
@@ -76,7 +99,7 @@ public class DFS {
 
     for (int v = 0; v < g.V(); v++) {//check if every vertex is connected
       if (dfs.hasPathTo(v)) {
-        Stack<Integer> path = new Stack<Integer>();
+        Stack<Integer> path;
         path = dfs.pathTo(v);
         while (!path.empty()) {
           int x = path.pop();

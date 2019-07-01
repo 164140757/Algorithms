@@ -1,7 +1,7 @@
 package MyjavaTest;
 
+import java.io.PrintStream;
 import java.util.LinkedList;
-import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
@@ -19,7 +19,7 @@ public class Connected_Components {
         size = new int[G.V()];
         for(int v=0;v<G.V();v++){
             if(!marked[v]){
-               // dfs(G,v);
+                dfs(G,v);
                 count ++;
             }
         }
@@ -86,9 +86,24 @@ public class Connected_Components {
         Connected_Components cc = new Connected_Components(G);
 
         int m = cc.count();
-        System.out.println(m+"components");
+        System.out.println(m+" components:");
+        //Queue[Queue]
+        Queue<Integer>[]components = (Queue<Integer>[])new Queue[m];
+        for(int i= 0;i<m;i++){
+            components[i] = new LinkedList<>();
+        }
+        for (int v=0;v<G.V();v++){
+            components[cc.id(v)].add(v);
+        }
 
-        Queue<Queue<Integer>> components = new PriorityQueue<>();
+        for(int i=0;i<m;i++){
+            System.out.printf("%d:",i);
+            for(int v:components[i]){
+                System.out.printf(v +" ");
+            }
+            System.out.println();
+        }
+
 
 
     }

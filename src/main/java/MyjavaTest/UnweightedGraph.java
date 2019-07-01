@@ -19,6 +19,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
     private int V;//cannot be modified
     private int E;//number of edges
     private List<Node> headNodeList;
+    private int model;
     //inner class & Generic Class
 
     //constructor of empty adjacency list
@@ -37,6 +38,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
     }
 
     public UnweightedGraph(In in, int model){//model: 1 for characters from A-Z ; 2 for Integer from 1 to n
+        this.model = model;
         try{
             this.V = in.readInt();
             if(V<0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
@@ -52,7 +54,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
                 headNodeList.add(node);
             }
             //add tags
-            headNodeListAddTags(model);
+            headNodeListAddTags();
             //add Edges
             for (int i =0;i<E;i++){
                 int v = in.readInt();
@@ -81,7 +83,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
         if(v<0 || v>V) throw new IllegalArgumentException("vertex"+V+"is not between 0 and"+(V-1));
         //() make sure parameter given to IllegalArgumentException is a string
     }
-    private void headNodeListAddTags(int model){
+    private void headNodeListAddTags(){
         switch (model) {
             case 1:
                 String init = "A";
@@ -122,8 +124,44 @@ public class UnweightedGraph {//double ->WeightType of Edges
         Node Nnode = new Node();
         Nnode.setIndex(u);
         Nnode.setWeight(VALUE);
-        Nnode.AutoAddtagForEnd(u,2);
+        Nnode.AutoAddtagForEnd(u,model);
         node.setNext(Nnode);
+    }
+    void reverse(){
+        List<Node> tempHeadNodeList = new ArrayList<>();
+        // template to save the result list
+        // init
+        for (int v = 0;v<V;v++){
+            Node node = new Node();
+            node.setNext(null);
+            node.setIndex(v);
+            tempHeadNodeList.add(node);
+        }
+        // create new Graph(reverse)
+        for(int i=0;i<V;i++){
+            String tag = headNodeList.get(i).getTag();
+            // tag to set is from the headNodeList[i]'s tag
+            Node node = headNodeList.get(i).getNext();
+            while(node !=null){
+                int index = node.getIndex();
+                Node nodeTemp = new Node();
+                nodeTemp.setTag(tag);
+                nodeTemp.setNext(null);
+                nodeTemp.setIndex(i);
+                nodeTemp.setWeight(1);
+                // get to the end of the node list
+                Node headNode = tempHeadNodeList.get(index);
+                Node preNode = new Node();
+                while(headNode!= null){
+                    preNode = headNode;
+                    headNode = headNode.getNext();
+                }
+                preNode.setNext(nodeTemp);
+                node = node.getNext();
+            }
+        }
+        headNodeList = tempHeadNodeList;
+        headNodeListAddTags();
     }
     private void traverseHeadList(){
         Node node = new Node();
@@ -153,8 +191,11 @@ public class UnweightedGraph {//double ->WeightType of Edges
         // g.addEdge(2, 1, 2.21);
         // g.addEdge(0, 2, 3.21);
         // g.traverseHeadList();
-        In in = new In("src/main/data/mediumG.txt");
-        UnweightedGraph g = new UnweightedGraph(in,2);
+        In in = new In("src/main/data/tinyG.txt");
+        UnweightedGraph g = new UnweightedGraph(in,1);
+        g.traverseHeadList();
+        g.reverse();
+        System.out.println("After reversing:");
         g.traverseHeadList();
     }
 }
