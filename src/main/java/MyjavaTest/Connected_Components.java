@@ -1,6 +1,5 @@
 package MyjavaTest;
 
-import java.io.PrintStream;
 import java.util.LinkedList;
 import java.util.Queue;
 
