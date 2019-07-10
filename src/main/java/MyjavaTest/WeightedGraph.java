@@ -193,7 +193,7 @@ public class WeightedGraph {//double ->WeightType of Edges
     // g.addEdge(2, 1, 2.21);
     // g.addEdge(0, 2, 3.21);
     // g.traverseHeadList();
-    In in = new In("src/main/data/10EWG.txt");
+    In in = new In("src/main/data/11EWG.txt");
     WeightedGraph g = new WeightedGraph(in,1);
     g.traverseHeadList();
     g.reverse();
