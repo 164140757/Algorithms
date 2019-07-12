@@ -77,7 +77,7 @@ public class UF {
             int q = in.readInt();
             if(!uf.connected(p,q))
                 uf.union(p,q);
-                System.out.println(p + " " + q + "is connected");
+                System.out.println(p + " " + q + " is connected");
         }
         System.out.println(uf.count() + " components in total ");
     }
