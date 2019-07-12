@@ -6,79 +6,82 @@ public class UF {
     private int count; //number of components
 
     /**
-     *
      * @param n : the number of sites
      * @throws IllegalArgumentException if ( @code n < 0)
      */
     UF(int n) {
-        if(n < 0) throw new IllegalArgumentException();
+        if (n < 0) throw new IllegalArgumentException();
         count = n; // number of sites
         parent = new int[n];
         rank = new byte[n];
-        for (int i = 0;i< n;i++) {
-            parent[i] = 0;
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
             rank[i] = 0;
         }
     }
 
     /**
-     *
      * @param p the integer representing one site
      * @return the component identifier {@code p}
      */
-    int find(int p){
-        validate (p);
-        while(p != parent[p]){
+    int find(int p) {
+        validate(p);
+        while (p != parent[p]) {
             parent[p] = parent[parent[p]]; // steps with greater distance & get a
             p = parent[p];
         }
         return p;
     }
 
-    private void validate(int p){
+    private void validate(int p) {
         int n = parent.length;
-        if(p < 0 || p > n)
-            throw new IllegalArgumentException("index" + p + "is not between 0 and " + (n-1));
+        if (p < 0 || p > n)
+            throw new IllegalArgumentException("index" + p + "is not between 0 and " + (n - 1));
     }
-    void union(int p , int q){
+
+    void union(int p, int q) {
         int rootP = find(p);
         int rootQ = find(q);
-        if(rootP == rootQ) return;
+        if (rootP == rootQ) return;
 
-        if(rank[rootP]< rank[rootQ]) parent[rootP] = rootQ;
-        else if(rank[rootP]> rank[rootQ]) parent[rootQ] = rootP;
-        else{
+        if (rank[rootP] < rank[rootQ]) parent[rootP] = rootQ;
+        else if (rank[rootP] > rank[rootQ]) parent[rootQ] = rootP;
+        else {
             parent[rootP] = rootQ;
-            rank[rootQ] ++;
+            rank[rootQ]++;
         }
-        count -- ;
+        count--;
     }
 
     /**
-     *
      * @param p site p
      * @param q site q
-     *
      * @return connected or not
      */
-    boolean connected(int p, int q){
+    boolean connected(int p, int q) {
         return find(p) == find(q);
     }
-    private int count(){
+
+    private int count() {
         return count;
     }
 
     public static void main(String[] args) {
-        In in = new In("src/main/data/txtdata/tinyUF.txt");
+        In in = new In("src/main/data/txtdata/mediumUF.txt");
         int n = in.readInt();
         UF uf = new UF(n);
-        for(int i=0;i<n;i++){
+        while(in.scanner.hasNext()) {
             int p = in.readInt();
             int q = in.readInt();
-            if(!uf.connected(p,q))
-                uf.union(p,q);
+            if (!uf.connected(p, q)) {
+                uf.union(p, q);
                 System.out.println(p + " " + q + " is connected");
+            }
         }
-        System.out.println(uf.count() + " components in total ");
+        System.out.println("parent[]:");
+        for (int id:uf.parent){
+            System.out.printf(id+" ");
+        }
+        System.out.println("\n"+uf.count() + " components in total ");
     }
 }

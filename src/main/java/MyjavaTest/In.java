@@ -10,7 +10,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public final class In{
-  private Scanner scanner;//declare
+  Scanner scanner;//declare
   // assume Unicode UTF-8 encoding
   private static final String CHARSET_NAME = "UTF-8";
   //assume language = English, country = US
