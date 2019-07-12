@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbc866f4-9753-4fc8-8a35-9aded421e72f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/Connected_Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyjavaTest/Connected_Components.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Kruskal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MyjavaTest/UF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MyjavaTest/UFTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_17_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_17_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graph.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Graph.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/data/1000EWG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/data/10EWG_bfs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/data/11EWG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/data/8EWG_unconnect.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/data/DFSdataBook.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/data/mediumG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/data/tinyG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/BFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/Connected_Components.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/DFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/DFS_TPL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/In.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/KosarajuSharirSCC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/TopoLogical_sort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/UnweightedGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MyjavaTest/WeightedGraph.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -12,37 +38,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/KosarajuSharirSCC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1378">
-              <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/Connected_Components.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            <state relative-caret-position="1066">
+              <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Kruskal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,10 +68,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/data/11EWG.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/In.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="1534">
+              <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="129" column="2" selection-start-line="129" selection-start-column="2" selection-end-line="129" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -69,30 +95,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/data/1000EWG.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/data/mediumG.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/data/DFSdataBook.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/data/tinyG.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/Node.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
               <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/UF.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MyjavaTest/UFTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -103,6 +136,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Arquillian JUnit Test Class" />
       </list>
     </option>
   </component>
@@ -134,6 +168,14 @@
         <option value="$PROJECT_DIR$/src/main/data/10EWG.txt" />
         <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/KosarajuSharirSCC.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/Connected_Components.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Edge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/Edge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/MST_KRUSKAL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Kruskal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/UF.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MyjavaTest/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MyjavaTest/UFTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -141,12 +183,13 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="243" />
+    <option name="y" value="36" />
     <option name="width" value="981" />
     <option name="height" value="1092" />
   </component>
@@ -186,6 +229,14 @@
               <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="txtdata" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,14 +251,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -215,11 +268,22 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="MyjavaTest" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="MyjavaTest" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -233,35 +297,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.KosarajuSharirSCC">
-    <configuration name="Connected_Components" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyjavaTest.Connected_Components" />
-      <module name="Graph" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MyjavaTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyjavaTest.DFS" />
-      <module name="Graph" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MyjavaTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.UF">
     <configuration name="KosarajuSharirSCC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyjavaTest.KosarajuSharirSCC" />
+      <module name="Graph" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MyjavaTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UF" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyjavaTest.UF" />
       <module name="Graph" />
       <extension name="coverage">
         <pattern>
@@ -299,10 +350,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UFTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
+      <module name="Graph" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MyjavaTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="PACKAGE_NAME" value="MyjavaTest" />
+      <option name="MAIN_CLASS_NAME" value="MyjavaTest.UFTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.KosarajuSharirSCC" />
+      <item itemvalue="Application.UF" />
+      <item itemvalue="Application.UnweightedGraph" />
+      <item itemvalue="Application.WeightedGraph" />
+      <item itemvalue="Arquillian JUnit.UFTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KosarajuSharirSCC" />
-        <item itemvalue="Application.UnweightedGraph" />
+        <item itemvalue="Application.UF" />
+        <item itemvalue="Arquillian JUnit.UFTest" />
       </list>
     </recent_temporary>
   </component>
@@ -326,15 +404,30 @@
       <workItem from="1562718038490" duration="42000" />
       <workItem from="1562718106779" duration="127000" />
       <workItem from="1562718358791" duration="9516000" />
-      <workItem from="1562758586516" duration="649000" />
+      <workItem from="1562758586516" duration="665000" />
+      <workItem from="1562760400380" duration="178000" />
+      <workItem from="1562887869768" duration="7066000" />
+      <workItem from="1562920888150" duration="237000" />
+      <workItem from="1562921587799" duration="675000" />
+      <workItem from="1562926351273" duration="754000" />
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40025000" />
+    <option name="totallyTimeSpent" value="48979000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -343,20 +436,20 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.22150365" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.23201293" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.39635158" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39966834" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3283582" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3283582" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3283582" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.4742952" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5004042" side_tool="true" weight="0.4742952" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4995958" weight="0.4742952" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3283582" />
       <window_info anchor="bottom" id="Python Console" order="14" weight="0.3283582" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -377,20 +470,20 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.21827" />
+      <window_info content_ui="combo" id="Project" order="6" weight="0.2279709" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.39635158" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39966834" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39966834" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3283582" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3283582" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3283582" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.4742952" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5004042" side_tool="true" weight="0.4742952" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.4995958" visible="true" weight="0.4742952" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3283582" />
       <window_info anchor="bottom" id="Python Console" order="14" weight="0.3283582" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -463,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3172">
-          <caret line="129" column="2" selection-start-line="129" selection-start-column="2" selection-end-line="129" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/UnweightedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2607">
@@ -491,68 +577,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/data/8EWG_unconnect.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/data/8EWG_unconnect.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/data/10EWG_bfs.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/KosarajuSharirSCC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/data/11EWG.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/data/1000EWG.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/data/mediumG.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/data/DFSdataBook.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/data/tinyG.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/Edge.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/MyjavaTest/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/Connected_Components.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1066">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/In.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1456">
+        <state relative-caret-position="1534">
           <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/8EWG_unconnect.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/8EWG_unconnect.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/10EWG_bfs.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/data/txtdata/tinyUF.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/11EWG.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/1000EWG.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/tinyG.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/mediumG.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/DFSdataBook.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/KosarajuSharirSCC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1378">
-          <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/DFS.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -561,19 +626,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/Connected_Components.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state relative-caret-position="390">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="129" column="2" selection-start-line="129" selection-start-column="2" selection-end-line="129" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Kruskal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/UF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MyjavaTest/UFTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
@@ -588,6 +699,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -610,6 +722,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -645,6 +758,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: org.jetbrains:annotations-java5:17.0.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
