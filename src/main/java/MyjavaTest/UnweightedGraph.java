@@ -32,6 +32,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
         for (int i=0;i<V;i++){//nodes -> list
             Node node = new Node();
             node.setIndex(i);
+            node.setHead(i);
             node.setNext(null);//only null in java
             headNodeList.add(node);
         }
@@ -49,6 +50,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
             headNodeList = new ArrayList<>(V);//()gives the initalCapacity
             for (int i=0;i<V;i++){//nodes -> list
                 Node node = new Node();
+                node.setHead(i);
                 node.setIndex(i);
                 node.setNext(null);//only null in java
                 headNodeList.add(node);
@@ -105,8 +107,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
     private void addEdge(int v,int u,double VALUE){
         validateVertex(v);
         validateVertex(u);
-        Node node = new Node();
-        node = headNodeList.get(v);//headNode[v] & get(i) returns the element at the position i
+        Node node = headNodeList.get(v);//headNode[v] & get(i) returns the element at the position i
         while(node.getNext()!=null){//headNode(n-1) already exits
             node = node.getNext();
             int index = node.getIndex();
@@ -122,6 +123,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
         }
         //headNode[u][v] does not exit
         Node Nnode = new Node();
+        Nnode.setHead(v);
         Nnode.setIndex(u);
         Nnode.setWeight(VALUE);
         Nnode.AutoAddtagForEnd(u,model);
@@ -135,6 +137,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
             Node node = new Node();
             node.setNext(null);
             node.setIndex(v);
+            node.setHead(v);
             tempHeadNodeList.add(node);
         }
         // create new Graph(reverse)
@@ -149,6 +152,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
                 nodeTemp.setNext(null);
                 nodeTemp.setIndex(i);
                 nodeTemp.setWeight(1);
+                nodeTemp.setHead(index);
                 // get to the end of the node list
                 Node headNode = tempHeadNodeList.get(index);
                 Node preNode = new Node();

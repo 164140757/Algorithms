@@ -5,14 +5,17 @@ class Node {
   private String tag;
   private Node next;
   private int index;
+  private int head;
 
   Node() {
+    head = 0;
     index = -1;
     next = null;
     tag = "#";
     // weight ->null
   }
-
+  int getHead(){return head;}
+  void setHead(int head){this.head = head;}
   int getIndex() {
     return index;
   }

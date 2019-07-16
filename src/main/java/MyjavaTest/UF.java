@@ -82,6 +82,6 @@ public class UF {
         for (int id:uf.parent){
             System.out.printf(id+" ");
         }
-        System.out.println("\n"+uf.count() + " components in total ");
+        System.out.println("\n"+uf.count() + "                                             components in total ");
     }
 }
