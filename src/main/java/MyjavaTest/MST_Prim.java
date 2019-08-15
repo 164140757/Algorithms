@@ -16,7 +16,7 @@ public class MST_Prim {
         disTo = new double[G.V()];
         edgeTo = new int[G.V()];
         marked = new boolean[G.V()];
-        pq = new PriorityQueue<Node>(G.E(),new EdgeComparator());
+        pq = new PriorityQueue<>(G.V(),new EdgeComparator());
         for(int i=0;i<G.V();i++){
             disTo[i] = Double.POSITIVE_INFINITY;
         }
@@ -44,7 +44,6 @@ public class MST_Prim {
 
         while (node != null) {
             boolean add_node = true;// check if pq has node yet
-            boolean contain = false;// whether pq has node (index)
             int v1 = node.getIndex();
 
             if (!marked[v1]) {
@@ -71,12 +70,7 @@ public class MST_Prim {
 
     }
 
-    public  java.util.PriorityQueue<MyjavaTest.Node> contains(Node o) {
 
-        for (Node item :pq){
-            if(item.getIndex()==o.getIndex()) return true;
-        }
-    }
 
     class EdgeComparator implements Comparator<Node> {
         // overriding compare()method of Comparator
