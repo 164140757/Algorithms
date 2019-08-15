@@ -93,7 +93,7 @@ public class DFS {
 
   public static void main(String[] args) {
     In in = new In("src/main/data/DFSdataBook.txt");
-    WeightedGraph g = new WeightedGraph(in, 1);
+    WeightedGraph g = new WeightedGraph(in, 1,false);
     int source = 0;
     DFS dfs = new DFS(g, source);
 

@@ -13,6 +13,8 @@ import java.util.NoSuchElementException;
  *
  * so I decide to create different classes, although it
  * seems a little improper.
+ *
+ * only simple graph is ok！
  */
 public class WeightedGraph {//double ->WeightType of Edges
   private int V;//cannot be modified
@@ -37,7 +39,7 @@ public class WeightedGraph {//double ->WeightType of Edges
     }
   }
 
-  WeightedGraph(In in,int model){//model: 1 for characters from A-Z ; 2 for Integer from 1 to n
+  WeightedGraph(In in,int model,boolean undirected){//model: 1 for characters from A-Z ; 2 for Integer from 1 to n
     this.model = model;
     try{
       this.V = in.readInt();
@@ -64,6 +66,7 @@ public class WeightedGraph {//double ->WeightType of Edges
         validateVertex(v);
         validateVertex(u);
         addEdge(v, u, w);
+        if(undirected) addEdge(u,v,w);
       }
     }
     catch(NoSuchElementException e){ //if the number of edges is not equal to the data 
@@ -198,7 +201,7 @@ public class WeightedGraph {//double ->WeightType of Edges
     // g.addEdge(0, 2, 3.21);
     // g.traverseHeadList();
     In in = new In("src/main/data/11EWG.txt");
-    WeightedGraph g = new WeightedGraph(in,1);
+    WeightedGraph g = new WeightedGraph(in,1,false);
     g.traverseHeadList();
     g.reverse();
     System.out.println("After reversing:");

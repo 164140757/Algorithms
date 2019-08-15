@@ -48,7 +48,7 @@ public class MST_Kruskal {
 
     public static void main(String[] args) {
         In in = new In("src/main/data/txtdata/11EWG.txt");
-        WeightedGraph g = new WeightedGraph(in,1);
+        WeightedGraph g = new WeightedGraph(in,1,false);
         MST_Kruskal mstkruskal = new MST_Kruskal(g);
         mstkruskal.check();
     }

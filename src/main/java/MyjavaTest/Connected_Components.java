@@ -81,7 +81,7 @@ public class Connected_Components {
 
     public static void main(String[] args) {
         In in = new In("src/main/data/mediumG.txt");
-        UnweightedGraph G = new UnweightedGraph(in,2);
+        UnweightedGraph G = new UnweightedGraph(in,2,false);
         Connected_Components cc = new Connected_Components(G);
 
         int m = cc.count();

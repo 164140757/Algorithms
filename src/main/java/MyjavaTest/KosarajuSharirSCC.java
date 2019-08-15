@@ -1,6 +1,5 @@
 package MyjavaTest;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class KosarajuSharirSCC {
@@ -61,7 +60,7 @@ public class KosarajuSharirSCC {
 
     public static void main(String[] args) {
         In in = new In("src/main/data/11EWG.txt");
-        WeightedGraph G = new WeightedGraph(in,1);
+        WeightedGraph G = new WeightedGraph(in,1,false);
         KosarajuSharirSCC scc = new KosarajuSharirSCC(G);
         System.out.printf("\nnumber of SCC:%d",scc.count);
     }

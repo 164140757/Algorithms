@@ -13,7 +13,7 @@ public class TopoLogical_sort{
   }
   public static void main(String[] args) {
     In in = new In("src/main/data/8EWG_unconnect.txt");
-    WeightedGraph g = new WeightedGraph(in,1);
+    WeightedGraph g = new WeightedGraph(in,1,false);
     int source = 0;
     TopoLogical_sort tpls = new TopoLogical_sort(g, source);
     Deque<Integer> Tpl_list = tpls.getList();

@@ -38,7 +38,8 @@ public class UnweightedGraph {//double ->WeightType of Edges
         }
     }
 
-    public UnweightedGraph(In in, int model){//model: 1 for characters from A-Z ; 2 for Integer from 1 to n
+    public UnweightedGraph(In in, int model, boolean undirected){//model: 1 for characters from A-Z ; 2 for Integer from 1 to n;
+        //directed : 1 / un->0
         this.model = model;
         try{
             this.V = in.readInt();
@@ -64,6 +65,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
                 validateVertex(v);
                 validateVertex(u);
                 addEdge(v, u, 1);//1 for unweighted
+                if(undirected) addEdge(u,v,1);
             }
         }
         catch(NoSuchElementException e){ //if the number of edges is not equal to the data
@@ -196,7 +198,7 @@ public class UnweightedGraph {//double ->WeightType of Edges
         // g.addEdge(0, 2, 3.21);
         // g.traverseHeadList();
         In in = new In("src/main/data/tinyG.txt");
-        UnweightedGraph g = new UnweightedGraph(in,1);
+        UnweightedGraph g = new UnweightedGraph(in,1,false);
         g.traverseHeadList();
         g.reverse();
         System.out.println("After reversing:");

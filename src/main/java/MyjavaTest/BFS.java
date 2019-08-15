@@ -75,7 +75,7 @@ public class BFS{
 
    public static void main(String[] args) {
     In in = new In("src/main/data/10EWG_bfs.txt");
-    WeightedGraph g = new WeightedGraph(in,1);
+    WeightedGraph g = new WeightedGraph(in,1,false);
     int source = 0;
     BFS bfs = new BFS(g,source);//one time bfs
     for(int v = 0;v<g.V();v++){//check if every vertex is connected
