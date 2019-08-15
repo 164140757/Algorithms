@@ -16,7 +16,7 @@ public class MST_Prim {
         disTo = new double[G.V()];
         edgeTo = new int[G.V()];
         marked = new boolean[G.V()];
-        pq = new PriorityQueue<>(G.E(),new EdgeComparator());
+        pq = new PriorityQueue<Node>(G.E(),new EdgeComparator());
         for(int i=0;i<G.V();i++){
             disTo[i] = Double.POSITIVE_INFINITY;
         }
@@ -40,21 +40,25 @@ public class MST_Prim {
 
 
     private void scan(WeightedGraph G, int v){
-
-
         Node node = G.HeadNodeList().get(v).getNext();
 
         while (node != null) {
             boolean add_node = true;// check if pq has node yet
+            boolean contain = false;// whether pq has node (index)
             int v1 = node.getIndex();
+
             if (!marked[v1]) {
+
                 if (disTo[v1] > node.getWeight()) {
                     disTo[v1] = node.getWeight();
+                    if(pq.contains(node)) {
+                        pq.remove(node); // if there's an element, delete it and re-insert to update the heap
+                        pq.add(node);
+                    }
+                    else pq.add(node);
                 }
-                for( Node item : pq){
-                    if(item.getIndex()==v1) add_node = false;
-                }
-                if(add_node)pq.add(node);
+
+
             }
             node = node.getNext();
         }
@@ -66,6 +70,14 @@ public class MST_Prim {
         weight += disTo[v2];
 
     }
+
+    public  java.util.PriorityQueue<MyjavaTest.Node> contains(Node o) {
+
+        for (Node item :pq){
+            if(item.getIndex()==o.getIndex()) return true;
+        }
+    }
+
     class EdgeComparator implements Comparator<Node> {
         // overriding compare()method of Comparator
         public int compare(Node n1,Node n2){
@@ -80,7 +92,7 @@ public class MST_Prim {
 
 
     public static void main(String[] args) {
-        In in = new In("src/main/data/txtdata/Underected_10EWG.txt");
+        In in = new In("src/main/data/txtdata/prim_book.txt");
         WeightedGraph g = new WeightedGraph(in, 1,true);
         MST_Prim mst_prim = new MST_Prim(g);
         System.out.printf("\nWeight: %f\n",mst_prim.weight);
