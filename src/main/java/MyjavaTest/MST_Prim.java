@@ -1,8 +1,11 @@
 package MyjavaTest;
 
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.PriorityQueue;
-
+class OpenData{
+    public static boolean contains = false;
+}
 public class MST_Prim {
 
     private int[] edgeTo; // edgeTo[v] = shortest edge from tree vertex to no_tree vertex
@@ -38,26 +41,34 @@ public class MST_Prim {
         // hierarchical traversal
     }
 
-
     private void scan(WeightedGraph G, int v){
         Node node = G.HeadNodeList().get(v).getNext();
 
         while (node != null) {
-            boolean add_node = true;// check if pq has node yet
             int v1 = node.getIndex();
-
-            if (!marked[v1]) {
-
-                if (disTo[v1] > node.getWeight()) {
+            OpenData.contains = false;
+            if (!marked[v1]&disTo[v1] > node.getWeight()) {
                     disTo[v1] = node.getWeight();
-                    if(pq.contains(node)) {
-                        pq.remove(node); // if there's an element, delete it and re-insert to update the heap
+                    Iterator<Node> nvalue = pq.iterator();
+                    while(nvalue.hasNext()){
+                        if(nvalue.next().getIndex() == node.getIndex()){
+                            OpenData.contains = true;//use other class to save common data, to enlarge the scale of the variable
+                            break;
+                        }
+                    }
+                    if(OpenData.contains) {
+                        int index = node.getIndex();
+                        // if there's an element, delete it and re-insert to update the heap
+                       for(Iterator<Node> iterator = pq.iterator();iterator.hasNext();){
+                           Node n = iterator.next();
+                           if(n.getIndex() == node.getIndex()){
+                               iterator.remove();//can only be changed by iterator
+                           }
+                       }
                         pq.add(node);
+
                     }
                     else pq.add(node);
-                }
-
-
             }
             node = node.getNext();
         }
@@ -86,7 +97,7 @@ public class MST_Prim {
 
 
     public static void main(String[] args) {
-        In in = new In("src/main/data/txtdata/prim_book.txt");
+        In in = new In("src/main/data/txtdata/11EWG.txt");
         WeightedGraph g = new WeightedGraph(in, 1,true);
         MST_Prim mst_prim = new MST_Prim(g);
         System.out.printf("\nWeight: %f\n",mst_prim.weight);
