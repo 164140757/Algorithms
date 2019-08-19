@@ -70,7 +70,8 @@ public class BellmanFord {
         int V = distTo.length;
         WeightedGraph wg = new WeightedGraph(V);
         for(int v = 0;v < V;v++){
-            if(lastNode[v]!=null) wg.addEdge((int)lastNode[v].charAt(0)-(int)'A'+1,v,0);
+            if(lastNode[v]!=null) wg.addEdge((int)lastNode[v].charAt(0)-(int)'A'+1,v,0);//we don't need value here -> 0
+
         }
 
 
