@@ -57,11 +57,17 @@ class Node {
     }
   }
 
-  public double getWeight() {
+  double getWeight() {
     return weight;
   }
 
-  public void setWeight(double weight) {
+  void setWeight(double weight) {
     this.weight = weight;
   }
+  String indextoTag(int index){
+    String init = "A";
+    int ret = (int)init.charAt(0) + index -1;
+    return  Integer.toString(ret);
+  }
+
 }

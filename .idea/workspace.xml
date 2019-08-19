@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbc866f4-9753-4fc8-8a35-9aded421e72f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/data/txtdata/prim_book.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MyjavaTest/PriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MyjavaTest/BellmanFord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Prim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Prim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MyjavaTest/MST_Prim$EdgeComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MyjavaTest/MST_Prim$EdgeComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MyjavaTest/MST_Prim.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MyjavaTest/MST_Prim.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyjavaTest/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,17 +28,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Prim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+            <state relative-caret-position="97">
+              <caret line="73" column="71" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/PriorityQueue.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/BellmanFord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-588">
-              <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+            <state relative-caret-position="253">
+              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2147#2148#0" expanded="true" />
+                <element signature="e#2183#2184#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,17 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/KosarajuSharirSCC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1508">
+            <state relative-caret-position="501">
               <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Kruskal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -65,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/data/txtdata/prim_book.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="390">
               <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
             </state>
           </provider>
@@ -74,9 +69,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="423">
+              <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
               <folding>
+                <element signature="e#345#346#0" expanded="true" />
                 <element signature="e#367#368#0" expanded="true" />
                 <element signature="e#500#501#0" expanded="true" />
                 <element signature="e#521#522#0" expanded="true" />
@@ -103,32 +99,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/UnweightedGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3169">
-              <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -155,11 +133,13 @@
         <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/BFS.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/Connected_Components.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/UnweightedGraph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java" />
         <option value="$PROJECT_DIR$/src/main/data/txtdata/11EWG.txt" />
         <option value="$PROJECT_DIR$/src/main/data/txtdata/Underected_10EWG.txt" />
         <option value="$PROJECT_DIR$/src/main/data/txtdata/Prim_book.txt" />
         <option value="$PROJECT_DIR$/src/main/data/txtdata/prim_book.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/BellmanFord.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Prim.java" />
       </list>
     </option>
@@ -187,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -258,7 +239,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -436,12 +416,13 @@
       <workItem from="1565688131783" duration="140000" />
       <workItem from="1565688394248" duration="8027000" />
       <workItem from="1565831310781" duration="14756000" />
+      <workItem from="1566174900930" duration="6506000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22783000" />
+    <option name="totallyTimeSpent" value="29289000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,7 +437,7 @@
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2497979" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2497979" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -525,16 +506,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Prim.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="uf.parent" />
@@ -645,45 +616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/txtdata/Underected_10EWG.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/UnweightedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3169">
-          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/KosarajuSharirSCC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/PriorityQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-588">
+        <state relative-caret-position="1560">
           <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Kruskal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -696,9 +632,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="423">
+          <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
           <folding>
+            <element signature="e#345#346#0" expanded="true" />
             <element signature="e#367#368#0" expanded="true" />
             <element signature="e#500#501#0" expanded="true" />
             <element signature="e#521#522#0" expanded="true" />
@@ -708,15 +645,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/data/txtdata/prim_book.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="390">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Kruskal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/KosarajuSharirSCC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/WeightedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="109" column="3" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/UnweightedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2236">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/data/txtdata/Underected_10EWG.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/BellmanFord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2147#2148#0" expanded="true" />
+            <element signature="e#2183#2184#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MyjavaTest/MST_Prim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        <state relative-caret-position="97">
+          <caret line="73" column="71" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
         </state>
       </provider>
     </entry>

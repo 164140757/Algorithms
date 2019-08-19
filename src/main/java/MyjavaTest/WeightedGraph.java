@@ -107,7 +107,7 @@ public class WeightedGraph {//double ->WeightType of Edges
         break;
     }
   }
-   private void addEdge(int v,int u,double VALUE){
+   void addEdge(int v,int u,double VALUE){
     validateVertex(v);
     validateVertex(u);
     Node node = headNodeList.get(v);//headNode[v] & get(i) returns the element at the position i
